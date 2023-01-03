@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Document</title>
+</head>
+<body>
+    <!-- First div (Ensure All html code) -->
+    <div class="container">
+            <!-- input - output Div -->
+        <div class="output">
+            <input type="text" id="score" placeholder="0">
+        </div>
+        <!-- buttons Div -->
+        <div class="buttons">
+            <!-- First buttons Div -->
+            <div class="first_line">
+                        <!-- C = 2rows -->
+                <button id="c"    onclick="document.getElementById('score').value = '';">C</button>
+                <button           onclick="document.getElementById('score').value += '0';">0</button>
+                <button           onclick="document.getElementById('score').value += '.';">.</button>
+                <button id="ope1" onclick="document.getElementById('score').value += ' + ';">+</button>
+            </div>
+                <!-- Second buttons Div -->
+            <div class="second_line">
+                <button onclick="document.getElementById('score').value += '3';">3</button>
+                <button onclick="document.getElementById('score').value += '2';">2</button>
+                <button onclick="document.getElementById('score').value += '1';">1</button>
+                <button id="ope2" onclick="document.getElementById('score').value += ' - ';">-</button>
+
+            </div>
+                <!-- Third buttons Div -->
+            <div class="third_line">
+                <button onclick="document.getElementById('score').value += '6';">6</button>
+                <button onclick="document.getElementById('score').value += '5';">5</button>
+                <button onclick="document.getElementById('score').value += '4';">4</button>
+                <button id="ope3" onclick="document.getElementById('score').value += '*';">x</button>
+            </div>
+                <!-- Fourth buttons Div -->
+
+            <div class="fourth_line">
+                <button onclick="document.getElementById('score').value += '9';">9</button>
+                <button onclick="document.getElementById('score').value += '8';">8</button>
+                <button onclick="document.getElementById('score').value += '7';">7</button>
+                <button  id="ope4" onclick="document.getElementById('score').value += '/';">/</button>
+            </div>
+            <!-- Fivth buttons Div -->
+            <div class="fivth_line">
+                <!-- = =2rows-->
+                <button id="equal" onclick="document.getElementById('score').value = eval(document.getElementById('score').value);">=</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        *{
+            transition: 0.4s;
+        }
+        body{
+            margin: 0;
+            width:100%;
+            height:100vh;
+            background-image: url(bg.jpg);
+            background-size: 100% 148%;
+            background-repeat: no-repeat;
+        }
+        .container{
+            width: 100%;
+            height: 70%;
+            background-color: #ffffff80;
+            width: 50%;  
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 3px;
+            box-shadow:  4px 4px 8px 8px gray;
+        }
+        .output{
+            width: 100%;
+            height: 20%;
+        }
+        .output #score{
+            width     : 94%;
+            height    : 85% ;
+            border    : none;
+            font-size : 30px;
+            margin    : 1% 2% ;
+            outline   : none;
+            border    : 3px solid black;
+            border-radius: 4px;
+        }
+        .container>.buttons{
+            width: 100%;
+            height:77%;
+            margin: 2% 2% ;
+            border-radius: 4px;
+        }
+        .buttons button{
+            cursor: pointer;
+            width: 22%;
+            height: 9vh;
+            font-size: 24px;
+            margin: 5px;
+            outline: none;
+            background-color: rgb(214, 214, 219);
+            border: none;
+            border-radius: 5px;
+            box-shadow: 4px 4px 2px  gray;
+        }
+        #ope1,#ope2,#ope3,#ope4{
+            background-color: black;
+            color: white;
+        }
+        #ope1:hover,#ope2:hover,#ope3:hover,#ope4:hover{
+            background-color: rgb(79, 79, 79);
+            color: white;
+        }
+        .first_line #c{
+            background-color: rgb(0, 255, 217);
+        }
+        .first_line #c:hover{
+            background-color: rgb(0, 162, 207);
+        }
+        .fivth_line #equal{
+            width: 94.4%;
+            background-color: rgb(0, 255, 0);
+        }
+        .fivth_line #equal:hover{
+            background-color: rgb(40, 209, 40);
+        }
+        .buttons button:hover{
+            background-color: rgb(171, 165, 165);
+        }
+    </style>
+</body>
+</html>
